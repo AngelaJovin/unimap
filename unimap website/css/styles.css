@@ -1,5 +1,12 @@
 body{
+ width: 100%;
   background-color: #fff;
+}
+#navbar{
+  background-color: #fff;
+  z-index: 1;
+  width: 100%;
+  box-sizing: content-box;
 }
 .navbar-brand{
   font-weight: 600;
@@ -7,6 +14,24 @@ body{
 }
 .navbar-nav a{
   color: #000 !important;
+}
+#navbar i{
+  color: #f59b7a;
+  position: sticky; 
+  top: 2.5%;
+  z-index: 1;/* Set the navbar to fixed position */
+  
+} 
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/*some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  width: 100%;
 }
 .button1{
   display: block;
@@ -40,21 +65,36 @@ body{
   border: none;
   background-color: #f59b7a !important;
 }
+.mb-3 input{
+  padding-left:40px;
+  }
 .form-control{
   border-radius: 50px !important;
-  width: 500px !important;
+  width: 60% !important;
   margin-bottom: 30px !important;
-  display: block;
-  margin: auto;
+  display: inline-block;
   box-shadow: 2px 2px 5px #888888;
+  margin: auto;
 }
 .icon{
-  display: block;
-  margin: auto;
+  position: absolute;
+  padding: 5px 5px ;
+  margin: 3px;
+  margin-left: 220px; 
 }
 
 
 @media (max-width:480px) {
   
+}
+.card i{
+  color: #f59b7a;
+}
+.card a{
+  text-decoration: none;
+  color: #000;
+}
+.card a:hover{
+  color: #f59b7a;
 }
 
